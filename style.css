@@ -1,0 +1,64 @@
+body{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+main {
+  height: 80vh;
+  overflow: hidden;
+  align-self: center;
+  border-radius: .25rem;
+}
+.list-todo {
+  height: 60%;
+  overflow-y: auto;
+}
+.tarefa-check ~ label {
+  transition: .3s ease;
+  position: relative;
+}
+.tarefa-check:checked, .tarefa-check:checked ~ label{
+  opacity: .5;
+}
+
+.tarefa-check ~ label::after {
+  content: '';
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  top: 55%;
+  opacity: 0;
+  background: currentColor;
+  transition: .3s ease;
+}
+.tarefa-check:checked ~ label::after {
+  width: 100%;
+  opacity: .5;
+}
+
+li,p {
+  animation: upList .2s ease forwards;
+}
+
+@keyframes upList {
+  0% {
+    opacity: 0;
+    transform: scale(.0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.invalid {
+  border: 2px solid rgb(218, 20, 20);
+}
+.error {
+  height: 25px;
+  text-align: left;
+}
+.form-control {
+  border-width: 2px;
+}

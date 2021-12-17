@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO LIST</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark">
+    <main class="container justify-content-center text-center bg-light py-5 col-4 shadow">
+      <h1 class="h3 col-12 pb-3 display-5 text-secondary">Todo List</h1>
+      <form class="todo-header d-flex gap-2 w-100 input-group col-6 pt-5">
+        <input class="form-control tarefa col-9 bg-opacity-75" type="text" name="tarefa" value>
+        <button class="btn btn-dark col-3" type="button" id="btnAdd">Adicionar</button>
+      </form>
+      <div class="error">
+        <p class="p-error text-danger d-none align-self-start">O input não pode estar vazio!</p>
+      </div>
+      <div class="container py-1 text-start col-12 list-todo">
+        <ul class="list-unstyled list"></ul>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
